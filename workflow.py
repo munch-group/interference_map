@@ -134,7 +134,7 @@ def interference_score(sites_file, annot_file, map_file, score_file, map_scale, 
 # Workflow components
 #################################################################################
 
-gwf = Workflow(defaults={'account': 'baboondiversity'})
+gwf = Workflow(defaults={'account': 'hri'})
 
 
 def split_file(vcf_file, split_sites_files_dir, n_files=50):
@@ -353,7 +353,7 @@ annotation_files_lifted_to_species = reciprocal_liftover(annotation_files,
 scores_files_species_coord = compute_interference_score(sites_files_lifted_to_species, 
     annotation_files_lifted_to_species, map_files,
     scores_dir = Path(os.getcwd(), 'steps', steps_root_dir, species, annotation_tag, 'scores_species_coord'),
-    map_scale=1000, # I THINIK MAP SCALE SHOULD REFLECT THE NUMBER OF GENERATIONS RELEVANT TO THE TYPE OF LINKED SELECTION. FOR SWEEPS IT WOULD BE THE NUMBER OF GENERATIONS TO COMPLETE THE SWEEP, SO MAYBE 1000 (30,000 YEARS)
+    map_scale=1000,
     rate_scale=1) # use rho, not recombination rate
 
                       # Maybe instead normalize all maps to total length 1 
