@@ -1,0 +1,14 @@
+name: interferrence-map
+channels:
+  - defaults
+dependencies:
+  - jupyterlab
+  - gwf[version='<2']
+  - chromwindow
+  - nodejs
+  - pytables
+  - git
+  - seaborn
+  - nbdime
+  - genominterv
+prefix: /home/kmt/miniconda3/envs/interferrence-map
