@@ -1,0 +1,18 @@
+[workspace]
+authors = ["kaspermunch <kaspermunch@birc.au.dk>"]
+channels = ["conda-forge", "gwforg", "munch-group", "msys2"]
+name = "interferrence-map"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+ipykernel = "*"
+gwf = "<2"
+nodejs = "*"
+pytables = "*"
+git = "*"
+seaborn = "*"
+nbdime = "*"
+setuptools = "<81"
